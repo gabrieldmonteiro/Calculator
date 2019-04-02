@@ -5,45 +5,47 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <script src="script.js"></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-    <input type="text" id="res"/>
+    <input type="text" id="input" readonly/>
     <table class="table table-bordered table-inverse table-responsive">
             <tbody>
                 <tr>
-                    <td><button value="7" id="bt7">C</button></td>
-                    <td><button value="7" id="bt7"><</button></td>
-                    <td><button value="7" id="bt7">/</button></td>                    
-                    <td><button value="7" id="bt7">X</button></td>                    
+                    <td><button onclick="clearExp()" id="btC">C</button></td>
+                    <td><button onclick="back()" id="btBackspace"><</button></td>
+                    <td><button onclick="insert('/')" value="/" id="btDiv">/</button></td>                    
+                    <td><button onclick="insert('*')" value="*" id="btMult">X</button></td>                    
                     
                 </tr>
                 <tr>
-                    <td><button value="7" id="bt7">7</button></td>
-                    <td><button value="7" id="bt7">8</button></td>
-                    <td><button value="7" id="bt7">9</button></td>                    
-                    <td><button value="7" id="bt7">-</button></td>                    
+                    <td><button onclick="insert(7)" value="7" id="bt7">7</button></td>
+                    <td><button onclick="insert(8)" value="8" id="bt8">8</button></td>
+                    <td><button onclick="insert(9)" value="9" id="bt9">9</button></td>                    
+                    <td><button onclick="insert('-')" value="-" id="btSubt">-</button></td>                    
                     
                 </tr>
                 <tr>
-                    <td><button value="7" id="bt7">4</button></td>
-                    <td><button value="7" id="bt7">5</button></td>
-                    <td><button value="7" id="bt7">6</button></td>                    
-                    <td><button value="7" id="bt7">+</button></td>                    
+                    <td><button onclick="insert(4)" value="4" id="bt4">4</button></td>
+                    <td><button onclick="insert(5)" value="5" id="bt5">5</button></td>
+                    <td><button onclick="insert(6)" value="6" id="bt6">6</button></td>                    
+                    <td><button onclick="insert('+')" value="+" id="btAdd">+</button></td>                    
                     
                 </tr>
                 <tr>
-                    <td><button value="7" id="bt7">1</button></td>
-                    <td><button value="7" id="bt7">2</button></td>
-                    <td><button value="7" id="bt7">3</button></td>                    
-                    <td rowspan="2"><button value="7" id="bt7">=</button></td>                    
+                    <td><button onclick="insert(1)" value="1" id="bt1">1</button></td>
+                    <td><button onclick="insert(2)" value="2" id="bt2">2</button></td>
+                    <td><button onclick="insert(3)" value="3" id="bt3">3</button></td>                    
+                    <td rowspan="2"><button onclick="answer()" id="btEquals">=</button></td>                    
                     
                 </tr>
                 <tr>                  
-                    <td colspan="2"><button value="7" id="bt7">0</button></td>                    
-                    <td><button value="7" id="bt7">,</button></td>                    
+                    <td colspan="2"><button onclick="insert(0)" value="0" id="bt0">0</button></td>                    
+                    <td><button onclick="insert('.')" value="." id="btDot">.</button></td>                    
                     
                 </tr>
             </tbody>
