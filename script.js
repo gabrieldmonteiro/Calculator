@@ -9,13 +9,15 @@ function clearExp(){
 }
 
 function back(){
-    var exp = document.getElementById("input");
-    console.log(exp.value);
-    exp.value = exp.substring(0,exp.length-1);
-    console.log(exp.value);
+    var exp = document.getElementById("input");  
+    exp.value = exp.value.substring(0,exp.value.length-1);    
 }
 
 function answer(){
 var exp = document.getElementById("input");
-exp.value = eval(exp.value);
+    if(exp.value){
+    exp.value = eval(exp.value);
+    }
 }
+
+
